@@ -2,7 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'org.jetbrains.kotlin.kapt'
- //   id 'io.michaelrocks.paranoid'
+    id 'io.michaelrocks.paranoid'
     id 'com.google.gms.google-services'
     
      id 'top.niunaijun.blackobfuscator'
@@ -24,7 +24,7 @@ Scrambler scrambler = new Scrambler()
 android {
     namespace rootProject.ext.packageName
     compileSdk 34
-    buildToolsVersion "34.0.4"
+    buildToolsVersion "34.0.0"
     ndkVersion rootProject.ext.ndkVersion
     lint {
        baseline = file("lint-baseline.xml")
