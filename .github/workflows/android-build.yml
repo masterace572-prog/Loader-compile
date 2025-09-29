@@ -1,4 +1,4 @@
-name: Android CI with APK Builder
+name: Android CI with APK Builder Pro
 
 on:
   workflow_dispatch:
@@ -58,7 +58,7 @@ jobs:
           
           📦 Project: ${{ github.repository }}
           📱 Build Type: debug
-          🔨 Built via APK Builder App
+          🔨 Built via APK Builder Pro App
           ✅ Ready to install!
 
     - name: 📊 Build Report
