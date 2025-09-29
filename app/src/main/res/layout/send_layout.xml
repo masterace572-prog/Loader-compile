@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:layout_margin="10dp"
+     android:orientation="vertical">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:background="@drawable/send_design"
+         android:orientation="horizontal"
+         android:layout_alignParentRight="true"
+         android:id="@+id/messageLayout">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:layout_marginBottom="10dp"
+             android:fontFamily="@font/calibri"
+             android:layout_marginLeft="20dp"
+             android:layout_marginRight="20dp"
+             android:textColor="#ffffff"
+             android:layout_marginTop="10dp"
+             android:id="@+id/message"
+             android:text="Hello, How are you?" />
+
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_below="@+id/messageLayout"
+         android:orientation="horizontal"
+         android:layout_alignParentRight="true">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:fontFamily="@font/calibri"
+             android:textSize="12dp"
+             android:layout_marginLeft="10dp"
+             android:layout_marginRight="0dp"
+             android:textColor="@color/white"
+             android:layout_marginTop="7dp"
+             android:id="@+id/time"
+             android:text="10:25 PM" />
+
+        <ImageView
+             android:layout_height="30dp"
+             android:layout_width="30dp"
+             android:src="@drawable/doubletick"
+             android:padding="5dp"
+             android:tint="@color/blue2"
+             android:id="@+id/seen" />
+
+    </LinearLayout>
+
+</RelativeLayout>

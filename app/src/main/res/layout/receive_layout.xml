@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     android:layout_margin="10dp"
+     android:orientation="vertical">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:orientation="horizontal"
+         android:id="@+id/messageLayout">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_height="40dp"
+             android:layout_width="40dp"
+             android:src="@drawable/icon_person"
+             android:layout_marginLeft="10dp"
+             app:civ_border_width="0dp"
+             android:layout_marginTop="2dp"
+             app:civ_border_color="#FF000000"
+             android:id="@+id/profile_image" />
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:background="@drawable/reveive_design"
+             android:orientation="vertical">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:fontFamily="@font/font"
+                 android:textSize="8dp"
+                 android:textColor="@color/black"
+                 android:layout_marginLeft="15dp"
+                 android:layout_gravity="left"
+                 android:id="@+id/username"
+                 android:text="@string/username" />
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_marginLeft="10dp">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginBottom="10dp"
+                     android:fontFamily="@font/calibri"
+                     android:layout_marginLeft="20dp"
+                     android:layout_marginRight="20dp"
+                     android:textColor="#000000"
+                     android:layout_marginTop="10dp"
+                     android:id="@+id/message"
+                     android:text="Hello, How are you?" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_below="@+id/messageLayout"
+         android:fontFamily="@font/calibri"
+         android:textSize="12dp"
+         android:layout_marginLeft="60dp"
+         android:layout_marginRight="10dp"
+         android:textColor="@color/white"
+         android:layout_marginTop="5dp"
+         android:id="@+id/time"
+         android:text="10:25 PM" />
+
+</RelativeLayout>

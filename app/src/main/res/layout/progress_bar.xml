@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="250dp"
+     android:layout_width="300dp"
+     app:cardElevation="8dp"
+     app:cardUseCompatPadding="true"
+     app:cardBackgroundColor="@color/white"
+     app:cardCornerRadius="4dp"
+     app:contentPadding="16dp">
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:layout_marginBottom="10dp"
+         android:gravity="center|center_horizontal"
+         android:layout_margin="10dp"
+         android:orientation="vertical">
+
+        <TextView
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             android:gravity="center"
+             android:fontFamily="@font/calibri"
+             android:textSize="18dp"
+             android:textColor="@color/white"
+             android:layout_gravity="center"
+             android:text="File Name" />
+<!--
+        <com.daimajia.numberprogressbar.NumberProgressBar
+            android:id="@+id/progress_bar"
+             android:layout_height="wrap_content"
+             android:layout_width="wrap_content"
+             app:progress_reached_color="#3498DB"
+             app:progress_max="100"
+             app:progress_text_visibility="visible"
+             app:progress_unreached_color="#CCCCCC"
+             app:progress_reached_bar_height="1.5dp"
+             app:progress_current="1"
+             app:progress_text_color="#3498DB"
+             app:progress_unreached_bar_height="0.75dp"
+             app:progress_text_size="10sp"
+             app:progress_text_offset="1dp" />
+-->
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <!-- Base application theme. -->
+  <style name="Base.AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#FF17202E</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:navigationBarColor">@color/background</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges <!-- default, shortEdges, or never --></item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog</item>
+        <item name="dialogCornerRadius">28dp</item>
+        <item name="alertDialogTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog</item>
+        <item name="switchPreferenceCompatStyle">@style/AppTheme.SwitchPreference</item>
+  </style>
+  
+    
+  <style name="AppTheme.SwitchPreference" parent="Preference.SwitchPreference.Material">
+    <item name="android:widgetLayout">@layout/layout_material_switch_style</item>
+  </style>
+    <!-- Base application theme. -->
+  <style name="AppTheme" parent="Base.AppTheme"></style>
+    
+    
+  <style name="TabLayout.TextStyle" parent="@android:style/TextAppearance.Widget.TabWidget">
+    <item name="android:fontFamily">@font/calibri</item>
+  </style>
+    <style name="roundedImageViewRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="GroupTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#FF17202E</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+    
+        <style
+            name="PKSwitch"
+            parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#0cf5c6</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#FFFFFF</item>
+        <!-- inactive track color (50% transparency) -->
+        <item name="android:colorForeground">#FFFFFF</item>
+    </style>
+
+    <style
+            name="PKSwitch2"
+            parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#0cf5c6</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#FFFFFF</item>
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#FFFFFF</item>
+    </style>
+</resources>

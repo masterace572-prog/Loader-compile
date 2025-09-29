@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@color/background">
+
+    <LinearLayout
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:visibility="visible"
+         android:orientation="vertical"
+         android:id="@+id/lay_login">
+
+        <LinearLayout
+             android:layout_height="130dp"
+             android:layout_width="match_parent"
+             android:layout_marginEnd="20dp"
+             android:gravity="top"
+             android:orientation="vertical"
+             android:layout_marginStart="20dp"
+             android:id="@+id/header">
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:layout_marginEnd="20dp"
+             android:layout_below="@id/header"
+             android:orientation="vertical"
+             android:layout_marginStart="20dp"
+             android:id="@+id/katakata">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:orientation="horizontal">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:fontFamily="@font/bold"
+                     android:textSize="20sp"
+                     android:textColor="@color/white"
+                     android:text="User" />
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:fontFamily="@font/bold"
+                     android:textSize="20sp"
+                     android:textColor="@color/blue2"
+                     android:layout_marginStart="5dp"
+                     android:text="Authentication"
+                     android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent"
+             android:layout_below="@id/katakata"
+             android:layout_marginEnd="20dp"
+             android:orientation="vertical"
+             android:layout_marginTop="20dp"
+             android:layout_marginStart="20dp"
+             android:id="@+id/login">
+
+            <LinearLayout
+                 android:layout_height="70dp"
+                 android:layout_width="match_parent"
+                 android:background="@drawable/radiuslogin"
+                 android:elevation="10dp"
+                 android:orientation="vertical">
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center|start"
+                     android:orientation="horizontal"
+                     android:layout_marginTop="10dp">
+
+                    <ImageView
+                         android:layout_height="20dp"
+                         android:layout_width="20dp"
+                         android:src="@drawable/login_player_id_left_icon"
+                         android:layout_marginStart="10dp" />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:fontFamily="@font/bold"
+                         android:textSize="16sp"
+                         android:textColor="@color/white"
+                         android:layout_marginStart="10dp"
+                         android:text="License" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:gravity="center|start"
+                     android:orientation="horizontal"
+                     android:layout_marginTop="2dp">
+
+                    <EditText
+                         android:layout_height="match_parent"
+                         android:layout_width="wrap_content"
+                         android:elevation="5dp"
+                         android:textSize="12sp"
+                         android:textColor="@color/whitegelap"
+                         android:layout_marginStart="43dp"
+                         android:ems="10"
+                         android:background="@drawable/no_back"
+                         android:hint="Enter your login credentials here..."
+                         android:textColorHint="@color/whitegelap"
+                         android:fontFamily="@font/font"
+                         android:textCursorDrawable="@drawable/cursor"
+                         android:inputType="textPassword"
+                         android:id="@+id/textUsername" />
+
+                    <LinearLayout
+                         android:layout_height="wrap_content"
+                         android:layout_width="match_parent"
+                         android:layout_marginEnd="15dp"
+                         android:gravity="center|end"
+                         android:orientation="horizontal">
+
+                        <ImageView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:layout_marginEnd="10dp"
+                             android:src="@drawable/baseline_content_paste_go_24"
+                             app:tint="@color/blue2"
+                             android:id="@+id/icpaste"
+                             android:layout_gravity="center" />
+
+                        <ImageView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:visibility="visible"
+                             android:src="@drawable/baseline_visibility_off_24"
+                             app:tint="@color/blue2"
+                             android:id="@+id/vis_pwd"
+                             android:layout_gravity="center" />
+
+                        <ImageView
+                             android:layout_height="wrap_content"
+                             android:layout_width="wrap_content"
+                             android:visibility="gone"
+                             android:src="@drawable/baseline_remove_red_eye_24"
+                             app:tint="@color/white"
+                             android:id="@+id/show_pwd"
+                             android:layout_gravity="center" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                 android:layout_height="50dp"
+                 android:layout_width="match_parent"
+                 app:cardElevation="10dp"
+                 app:cardBackgroundColor="@color/button"
+                 android:layout_marginTop="20dp"
+                 app:cardCornerRadius="7dp"
+                 android:id="@+id/btnSignIn">
+
+                <TextView
+                     android:layout_height="match_parent"
+                     android:layout_width="match_parent"
+                     android:gravity="center"
+                     android:fontFamily="@font/bold"
+                     android:textSize="15sp"
+                     android:textColor="@color/white"
+                     android:text="LOGIN" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:gravity="center"
+                 android:orientation="horizontal"
+                 android:layout_marginTop="10dp">
+
+                <TextView
+                     android:layout_height="match_parent"
+                     android:layout_width="wrap_content"
+                     android:fontFamily="@font/font"
+                     android:textSize="15sp"
+                     android:textColor="@color/white"
+                     android:text="If don't have license ?" />
+
+                <TextView
+                     android:layout_height="match_parent"
+                     android:layout_width="wrap_content"
+                     android:fontFamily="@font/font"
+                     android:textSize="15sp"
+                     android:textColor="@color/whitegelap"
+                     android:layout_marginStart="5dp"
+                     android:id="@+id/GetKey"
+                     android:text="Contact" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:gravity="center"
+                 android:orientation="horizontal"
+                 android:layout_marginTop="5dp">
+
+                <TextView
+                     android:layout_height="match_parent"
+                     android:layout_width="wrap_content"
+                     android:textSize="12sp"
+                     android:textColor="@color/blue2"
+                     android:id="@+id/pp"
+                     android:textStyle="italic"
+                     android:text="Privacy Policy" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.webkit.WebView
+         android:layout_height="match_parent"
+         android:layout_width="match_parent"
+         android:visibility="gone"
+         android:background="@color/background"
+         android:id="@+id/activity_main_webview">
+
+    </android.webkit.WebView>
+
+</RelativeLayout>

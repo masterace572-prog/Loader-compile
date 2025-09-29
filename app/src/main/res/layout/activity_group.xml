@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:background="@color/background"
+     android:orientation="vertical">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:orientation="vertical"
+         android:layout_weight="1">
+
+        <androidx.appcompat.widget.Toolbar
+             android:layout_height="50dp"
+             android:layout_width="match_parent"
+             android:background="@color/card_background">
+
+            <LinearLayout
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:orientation="horizontal">
+
+                <ImageView
+                     android:layout_height="wrap_content"
+                     android:layout_width="30dp"
+                     android:src="@drawable/back"
+                     android:padding="5dp"
+                     android:tint="@color/white"
+                     android:id="@+id/back" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                     android:layout_height="match_parent"
+                     android:layout_width="30dp"
+                     android:src="@drawable/icon_person"
+                     android:layout_marginLeft="0dp"
+                     app:civ_border_width="0dp"
+                     android:layout_marginTop="2dp"
+                     app:civ_border_color="#FF000000"
+                     android:id="@+id/profile_image" />
+
+                <TextView
+                     android:layout_height="match_parent"
+                     android:layout_width="wrap_content"
+                     android:gravity="center"
+                     android:fontFamily="@font/calibri"
+                     android:textSize="18dp"
+                     android:layout_marginLeft="10dp"
+                     android:textColor="@color/white"
+                     android:maxLines="1"
+                     android:id="@+id/tv_username"
+                     android:text="@string/username" />
+
+                <LinearLayout
+                     android:layout_height="match_parent"
+                     android:layout_width="match_parent"
+                     android:gravity="end">
+
+                    <ImageView
+                         android:layout_height="match_parent"
+                         android:layout_width="40dp"
+                         android:visibility="gone"
+                         android:src="@drawable/ic_up_red"
+                         android:padding="10dp"
+                         android:tint="#4a4a4a" />
+
+                    <ImageView
+                         android:layout_height="match_parent"
+                         android:layout_width="40dp"
+                         android:visibility="gone"
+                         android:src="@drawable/ic_up_red"
+                         android:padding="10dp"
+                         android:tint="#4a4a4a" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+             android:layout_height="match_parent"
+             android:layout_width="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                 android:layout_height="match_parent"
+                 android:layout_width="match_parent"
+                 android:id="@+id/recycler_view" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+         android:layout_height="50dp"
+         android:layout_width="fill_parent"
+         android:background="@color/card_background"
+         android:orientation="horizontal"
+         android:layout_alignParentBottom="true">
+
+        <ImageView
+             android:layout_height="wrap_content"
+             android:layout_width="40dp"
+             android:visibility="visible"
+             android:src="@drawable/ic_up_red"
+             android:padding="5dp"
+             android:layout_marginLeft="10dp"
+             android:tint="@color/white"
+             android:id="@+id/sendImg" />
+
+        <EditText
+             android:layout_height="match_parent"
+             android:layout_width="fill_parent"
+             android:background="@null"
+             android:hint="Message..."
+             android:textColorHint="@color/grey"
+             android:fontFamily="@font/calibri"
+             android:textColor="@color/white"
+             android:layout_marginLeft="10dp"
+             android:maxLines="2"
+             android:layout_weight="1"
+             android:id="@+id/messageET" />
+
+        <ImageView
+             android:layout_height="wrap_content"
+             android:layout_width="40dp"
+             android:src="@drawable/send"
+             android:padding="5dp"
+             android:layout_marginRight="10dp"
+             android:tint="@color/blue2"
+             android:id="@+id/sendBtn" />
+
+    </LinearLayout>
+
+</LinearLayout>

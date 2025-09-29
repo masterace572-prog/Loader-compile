@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF17202E</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#58588D</color>
+    <color name="main">#FF5600</color>
+    <color name="white">#FFFFFF</color>
+    <color name="background">#191C1D</color>
+    <color name="button">#232732</color>
+    <color name="blue">#3A6FBD</color>
+    <color name="blue2">#FF198DFA</color>
+    <color name="whitegelap">#9C9999</color>
+    <color name="grey">#535353</color>
+    <color name="dark_grey">#4a4a4a</color>
+    <color name="card_background">#FF17181C</color>
+    <color name="black">#000000</color>
+    <!-- Button start stop -->
+    
+    <color name="startbtn">#f8465c</color>
+    <color name="stopbtn">#2ebc86</color>
+</resources>

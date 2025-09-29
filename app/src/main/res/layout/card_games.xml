@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_height="wrap_content"
+     android:layout_width="match_parent"
+     app:cardElevation="8dp"
+     app:cardUseCompatPadding="true"
+     app:cardBackgroundColor="@color/card_background"
+     app:contentPadding="16dp"
+     app:cardCornerRadius="4dp">
+
+    <LinearLayout
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:orientation="vertical">
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:weightSum="100"
+             android:orientation="horizontal">
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="wrap_content">
+
+                <ImageView
+                     android:layout_height="72dp"
+                     android:layout_width="72dp"
+                     android:src="@drawable/pubg_global"
+                     android:id="@+id/gameIcon" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_height="wrap_content"
+                 android:layout_width="0dp"
+                 android:orientation="vertical"
+                 android:layout_marginLeft="5dp"
+                 android:layout_weight="90">
+
+                <TextView
+                     android:layout_height="wrap_content"
+                     android:layout_width="wrap_content"
+                     android:layout_marginBottom="1dp"
+                     android:fontFamily="@font/bold"
+                     android:textSize="18dp"
+                     android:textColor="@color/white"
+                     android:id="@+id/gameTitle"
+                     android:text="PUBG GLOBAL" />
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal">
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:fontFamily="@font/calibri"
+                         android:textSize="14dp"
+                         android:textColor="@color/white"
+                         android:text="Version: " />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:fontFamily="@font/calibri"
+                         android:textSize="14dp"
+                         android:textColor="@color/white"
+                         android:id="@+id/gameVersion"
+                         android:text="@android:string/unknownName" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal">
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:fontFamily="@font/calibri"
+                         android:textSize="14dp"
+                         android:textColor="@color/white"
+                         android:text="Status: " />
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:fontFamily="@font/calibri"
+                         android:textSize="14dp"
+                         android:textColor="@color/white"
+                         android:id="@+id/gameStatus"
+                         android:text="@android:string/unknownName" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                     android:layout_height="wrap_content"
+                     android:layout_width="match_parent"
+                     android:orientation="horizontal">
+
+                    <TextView
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:fontFamily="@font/calibri"
+                         android:textSize="14dp"
+                         android:textColor="@color/white"
+                         android:text="Package: " />
+
+                    <TextView
+                         android:singleLine="true"
+                         android:layout_height="wrap_content"
+                         android:layout_width="wrap_content"
+                         android:fontFamily="@font/calibri"
+                         android:textSize="14dp"
+                         android:textColor="@color/white"
+                         android:id="@+id/gamePackage"
+                         android:text="@android:string/unknownName" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+             android:layout_height="2dp"
+             android:layout_width="match_parent"
+             android:layout_marginBottom="0dp"
+             android:layout_marginTop="16dp" />
+
+        <LinearLayout
+             android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             android:gravity="center">
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:textSize="14sp"
+                 android:layout_marginLeft="10dp"
+                 android:textColor="#FFFFFF"
+                 android:singleLine="true"
+                 android:enabled="false"
+                 android:gravity="center"
+                 android:background="@drawable/button_coming"
+                 android:textAlignment="center"
+                 android:fontFamily="@font/calibri"
+                 android:paddingBottom="8dp"
+                 android:layout_marginRight="10dp"
+                 android:layout_weight="33.33"
+                 android:id="@+id/noBtn"
+                 android:paddingTop="8dp"
+                 android:text="@string/uinstall_game"
+                 android:textStyle="normal" />
+
+            <TextView
+                 android:layout_height="wrap_content"
+                 android:layout_width="match_parent"
+                 android:textSize="14sp"
+                 android:textColor="#FFFFFF"
+                 android:singleLine="true"
+                 android:gravity="center"
+                 android:background="@drawable/button_install"
+                 android:textAlignment="center"
+                 android:fontFamily="@font/calibri"
+                 android:paddingBottom="8dp"
+                 android:layout_marginRight="10dp"
+                 android:layout_weight="33.33"
+                 android:id="@+id/okBtn"
+                 android:paddingTop="8dp"
+                 android:text="@string/install_game"
+                 android:textStyle="normal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
