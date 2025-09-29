@@ -24,55 +24,41 @@ jobs:
 
     - name: ✅ Accept Android Licenses
       run: |
-        yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+        yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses
 
     - name: 📥 Install Android Components
       run: |
-        $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --install "platforms;android-34" "build-tools;34.0.0" "platform-tools"
-        $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --install "ndk;25.1.8937393" "cmake;3.22.1"
-
-    - name: 🔧 Configure Gradle
-      run: |
-        # Create gradle.properties with necessary configurations
-        echo "android.suppressUnsupportedCompileSdk=34" >> gradle.properties
-        echo "android.experimental.legacyTransform.forceNonIncremental=true" >> gradle.properties
+        $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0" "platform-tools"
+        $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "ndk;25.1.8937393" "cmake;3.22.1"
 
     - name: 🏗️ Build APK
       run: |
         chmod +x gradlew
-        ./gradlew clean assembleDebug --no-daemon --stacktrace
+        ./gradlew clean
+        ./gradlew assembleDebug
 
     - name: 🔍 Find APK
       id: find_apk
       run: |
-        # Look for APK files more comprehensively
-        APK_PATH=$(find . -name "*.apk" -path "*/build/outputs/apk/*" | grep -v "unsigned" | head -1)
+        APK_PATH=$(find . -name "*.apk" | grep -v "unsigned" | head -1)
         if [ -z "$APK_PATH" ]; then
           APK_PATH=$(find . -name "*debug*.apk" | head -1)
         fi
-        if [ -z "$APK_PATH" ]; then
-          echo "❌ No APK file found!"
-          find . -name "*.apk" -type f | while read file; do
-            echo "Found APK: $file"
-          done
-          exit 1
-        fi
         echo "APK_PATH=$APK_PATH" >> $GITHUB_OUTPUT
         echo "📱 Found APK: $APK_PATH"
-        ls -la "$(dirname "$APK_PATH")"
 
     - name: 📤 Send to Telegram
       uses: appleboy/telegram-action@master
       with:
-        to: ${{ secrets.TELEGRAM_CHAT_ID }}
-        token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        to: 7022875343
+        token: 7704220520:AAEI_ouYgKUdt52-ec9JJDjdo44pme781Ls
         document: ${{ steps.find_apk.outputs.APK_PATH }}
         caption: |
           🚀 APK Build Complete!
           
           📦 Project: ${{ github.repository }}
-          📱 Build Type: Debug
-          🔨 Built via GitHub Actions
+          📱 Build Type: debug
+          🔨 Built via APK Builder App
           ✅ Ready to install!
 
     - name: 📊 Build Report
@@ -80,8 +66,6 @@ jobs:
       run: |
         echo "=== BUILD COMPLETE ==="
         echo "Repository: ${{ github.repository }}"
-        echo "Ref: ${{ github.ref }}"
-        echo "Commit: ${{ github.sha }}"
-        echo "Build Type: Debug"
+        echo "Build Type: debug"
         echo "APK Path: ${{ steps.find_apk.outputs.APK_PATH }}"
         echo "Status: ${{ job.status }}"
