@@ -80,7 +80,7 @@ ext {
     versionName = "1.0.0-beta";
     
     
-     buildToolsVersion = '34.0.4'
+     buildToolsVersion = '34.0.0'
      blackReflection = '1.1.4'
 }
 
