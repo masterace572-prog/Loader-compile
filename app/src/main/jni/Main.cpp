@@ -164,7 +164,7 @@ Java_pubgm_loader_activity_LoginActivity_Check(JNIEnv *env, jclass clazz, jobjec
     curl = curl_easy_init();
     if (curl) {
         char lol[1000];
-        sprintf(lol,OBFUSCATE("https://free.kuropanel.me/public/connect"));
+        sprintf(lol,OBFUSCATE("https://kennypvthax.ai-new.xyz/server"));
   
         curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, "POST");
         curl_easy_setopt(curl, CURLOPT_URL, lol);
@@ -194,7 +194,7 @@ Java_pubgm_loader_activity_LoginActivity_Check(JNIEnv *env, jclass clazz, jobjec
                 auto STATUS = std::string{"status"};
                 if (result[STATUS] == true) {
                     std::string token = result["data"]["token"].get<std::string>();
-                    exdate = result["data"]["BHATIA_EXP"].get<std::string>();
+                    exdate = result["data"]["EXP"].get<std::string>();
                     rng = result["data"]["rng"].get<time_t>();
                     if (rng + 30 > time(0)) {
                         std::string auth = "PUBG";
@@ -203,7 +203,7 @@ Java_pubgm_loader_activity_LoginActivity_Check(JNIEnv *env, jclass clazz, jobjec
                         auth += "-";
                         auth += UUID;
                         auth += "-";
-                        auth += "Vm8Lk7Uj2JmsjCPVPVjrLa7zgfx3uz9E";
+                        auth += "Qp5KSGTquetnUkjX6UVBAURH8hTkZuLM";
                         std::string outputAuth = CalcMD5(auth);
                         g_Token = token;
                         g_Auth = outputAuth;
