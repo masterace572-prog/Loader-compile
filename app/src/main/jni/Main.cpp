@@ -203,7 +203,7 @@ Java_pubgm_loader_activity_LoginActivity_Check(JNIEnv *env, jclass clazz, jobjec
                         auth += "-";
                         auth += UUID;
                         auth += "-";
-                        auth += "Qp5KSGTquetnUkjX6UVBAURH8hTkZuLM";
+                        auth += "Vm8Lk7Uj2JmsjCPVPVjrLa7zgfx3uz9E";
                         std::string outputAuth = CalcMD5(auth);
                         g_Token = token;
                         g_Auth = outputAuth;
