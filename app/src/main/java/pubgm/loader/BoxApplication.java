@@ -100,7 +100,7 @@ public class BoxApplication extends Application {
         
         
         
-        blackboxapi.activateSdk("BHEZQM7UK10L");/// black box sdk key paste here 👈👈
+        blackboxapi.activateSdk("BLACKBOXBYZENINTRIAL");/// black box sdk key paste here 👈👈
         
         
         
